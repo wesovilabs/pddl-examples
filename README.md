@@ -7,13 +7,13 @@ Resolution to problems with PDDL
 
 The problems to be resolved are the below:
 
-### Problem 1
+### Problem 1
 ![Problem 1](./doc/problem1.png)
 
-### Problem 2
+### Problem 2
 ![Problem 2](./doc/problem2.png)
 
-### Problem 3
+### Problem 3
 ![Problem 3](./doc/problem3.png)
 
 
