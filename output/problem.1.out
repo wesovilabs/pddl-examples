@@ -1,0 +1,310 @@
+---------
+metricff
+---------
+
+ff: parsing domain file
+domain 'HOSPITAL-AMBULANCE-PATIENT' defined
+ ... done.
+ff: parsing problem file
+problem 'PATIENT-WATING-TO-BE-ATTENDED' defined
+ ... done.
+
+
+no metric specified. plan length assumed.
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is EHC, if that fails then  best-first on 1*g(s) + 5*h(s) where
+    metric is  plan length
+
+Cueing down from goal distance:    7 into depth [1][2][3]
+                                   6            [1][2][3]
+                                   5            [1][2][3][4]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0
+
+ff: found legal plan as follows
+
+step    0: MOVE AMBULANCE1 LOC1 LOC2
+        1: MOVE AMBULANCE1 LOC2 LOC4
+        2: PICK AMBULANCE1 PATIENT2 LOC4
+        3: MOVE AMBULANCE1 LOC4 LOC2
+        4: MOVE AMBULANCE1 LOC2 LOC1
+        5: DROP AMBULANCE1 PATIENT2 LOC1
+        6: MOVE AMBULANCE1 LOC1 LOC2
+        7: MOVE AMBULANCE1 LOC2 LOC4
+        8: MOVE AMBULANCE1 LOC4 LOC3
+        9: PICK AMBULANCE1 PATIENT1 LOC3
+       10: MOVE AMBULANCE1 LOC3 LOC4
+       11: MOVE AMBULANCE1 LOC4 LOC2
+       12: MOVE AMBULANCE1 LOC2 LOC1
+       13: DROP AMBULANCE1 PATIENT1 LOC1
+
+
+time spent:    0.00 seconds instantiating 8 easy, 6 hard action templates
+               0.00 seconds reachability analysis, yielding 12 facts and 10 actions
+               0.00 seconds creating final representation with 12 relevant facts, 0 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 17 states, to a max depth of 4
+               0.00 seconds total time
+
+
+
+---------
+SMTPlan
+---------
+Grounded:	0.002216 seconds
+Algebra:	0.000030 seconds
+Encoded 1:	0.001278 seconds
+Solved 1:	0.000508 seconds
+Encoded 2:	0.000387 seconds
+Solved 2:	0.000610 seconds
+Encoded 3:	0.000350 seconds
+Solved 3:	0.000885 seconds
+Encoded 4:	0.000399 seconds
+Solved 4:	0.001954 seconds
+Encoded 5:	0.000361 seconds
+Solved 5:	0.002939 seconds
+Encoded 6:	0.000348 seconds
+Solved 6:	0.005579 seconds
+Encoded 7:	0.000350 seconds
+Solved 7:	0.006581 seconds
+Encoded 8:	0.000342 seconds
+Solved 8:	0.007918 seconds
+Encoded 9:	0.000461 seconds
+Solved 9:	0.009498 seconds
+Encoded 10:	0.000367 seconds
+Solved 10:	0.011481 seconds
+Encoded 11:	0.000404 seconds
+Solved 11:	0.012501 seconds
+Encoded 12:	0.000355 seconds
+Solved 12:	0.015280 seconds
+Encoded 13:	0.000462 seconds
+Solved 13:	0.015341 seconds
+Encoded 14:	0.000351 seconds
+0.0:	(move ambulance1 loc1 loc2) [0.0]
+2.0:	(move ambulance1 loc2 loc4) [0.0]
+4.0:	(move ambulance1 loc4 loc3) [0.0]
+6.0:	(pick ambulance1 patient1 loc3) [0.0]
+8.0:	(move ambulance1 loc3 loc4) [0.0]
+10.0:	(move ambulance1 loc4 loc2) [0.0]
+12.0:	(move ambulance1 loc2 loc1) [0.0]
+14.0:	(drop ambulance1 patient1 loc1) [0.0]
+16.0:	(move ambulance1 loc1 loc2) [0.0]
+18.0:	(move ambulance1 loc2 loc4) [0.0]
+20.0:	(pick ambulance1 patient2 loc4) [0.0]
+22.0:	(move ambulance1 loc4 loc2) [0.0]
+24.0:	(move ambulance1 loc2 loc1) [0.0]
+26.0:	(drop ambulance1 patient2 loc1) [0.0]
+Solved 14:	0.017907 seconds
+Total time:	0.169784 seconds
+
+
+---------
+fd
+---------
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /src/fd/builds/release/bin/translate/translate.py /var/data/domain.pddl /var/data/problem.1.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.010s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.003s wall-clock]
+Preparing model... [0.000s CPU, 0.000s wall-clock]
+Generated 24 rules.
+Computing model... [0.000s CPU, 0.001s wall-clock]
+52 relevant atoms
+45 auxiliary atoms
+97 final queue length
+104 total queue pushes
+Completing instantiation... [0.000s CPU, 0.000s wall-clock]
+Instantiating: [0.010s CPU, 0.005s wall-clock]
+Computing fact groups...
+Finding invariants...
+8 initial candidates
+Finding invariants: [0.000s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+0 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.002s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.001s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+2 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.000s wall-clock]
+Reordering and filtering variables...
+4 of 4 variables necessary.
+2 of 4 mutex groups necessary.
+10 of 10 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
+Translator variables: 4
+Translator derived variables: 0
+Translator facts: 13
+Translator goal facts: 2
+Translator mutex groups: 2
+Translator total mutex groups size: 6
+Translator operators: 10
+Translator axioms: 0
+Translator task size: 65
+Translator peak memory: 39512 KB
+Writing output... [0.000s CPU, 0.000s wall-clock]
+Done! [0.020s CPU, 0.019s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /src/fd/builds/release/bin/downward --evaluator 'hlm=lmcount(lm_factory=lm_rhw(reasonable_orders=true),transform=adapt_costs(one),pref=false)' --evaluator 'hff=ff(transform=adapt_costs(one))' --search 'lazy_greedy([hff,hlm],preferred=[hff,hlm],cost_type=one,reopen_closed=false)' --internal-plan-file sas_plan < output.sas
+[t=3.4285e-05s, 55868 KB] reading input...
+[t=0.000220375s, 55868 KB] done reading input!
+[t=0.00170248s, 56132 KB] Initializing landmarks count heuristic...
+[t=0.00178054s, 56132 KB] Initializing Exploration...
+[t=0.00181546s, 56132 KB] Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+[t=0.00199661s, 56132 KB] approx. obedient reasonable orders
+[t=0.00203598s, 56132 KB] Removed 0 reasonable or obedient reasonable orders
+[t=0.00207304s, 56132 KB] Landmarks generation time: 0.000315974s
+[t=0.00209407s, 56132 KB] Discovered 11 landmarks, of which 0 are disjunctive and 0 are conjunctive.
+[t=0.00210937s, 56132 KB] 26 edges
+[t=0.00215472s, 56132 KB] Simplifying 14 unary operators... done! [14 unary operators]
+[t=0.00221615s, 56132 KB] time to simplify: 8.5957e-05s
+[t=0.00224479s, 56132 KB] Initializing additive heuristic...
+[t=0.0022604s, 56132 KB] Initializing FF heuristic...
+[t=0.00232682s, 56132 KB] Building successor generator...done!
+[t=0.00240094s, 56132 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.0024439s, 56132 KB] time for successor generation creation: 1.05e-05s
+[t=0.00247996s, 56132 KB] Variables: 4
+[t=0.00249929s, 56132 KB] FactPairs: 13
+[t=0.00251611s, 56132 KB] Bytes per state: 4
+[t=0.00260056s, 56132 KB] Conducting lazy best first search, (real) bound = 2147483647
+[t=0.00267526s, 56132 KB] 4 initial landmarks, 2 goal landmarks
+[t=0.00273958s, 56132 KB] New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 7
+[t=0.00276015s, 56132 KB] New best heuristic value for ff(transform = adapt_costs(one)): 7
+[t=0.00277661s, 56132 KB] g=0, 1 evaluated, 0 expanded
+[t=0.00288962s, 56132 KB] Initial heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 7
+[t=0.00292723s, 56132 KB] Initial heuristic value for ff(transform = adapt_costs(one)): 7
+[t=0.00298412s, 56132 KB] New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 6
+[t=0.00305939s, 56132 KB] g=2, 3 evaluated, 2 expanded
+[t=0.00313183s, 56132 KB] New best heuristic value for ff(transform = adapt_costs(one)): 6
+[t=0.00317522s, 56132 KB] g=3, 5 evaluated, 4 expanded
+[t=0.00323704s, 56132 KB] New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 5
+[t=0.0032856s, 56132 KB] g=4, 7 evaluated, 6 expanded
+[t=0.00335815s, 56132 KB] New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 4
+[t=0.00338909s, 56132 KB] New best heuristic value for ff(transform = adapt_costs(one)): 5
+[t=0.00340679s, 56132 KB] g=6, 10 evaluated, 9 expanded
+[t=0.00344002s, 56132 KB] New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 3
+[t=0.00345871s, 56132 KB] g=9, 13 evaluated, 12 expanded
+[t=0.00348225s, 56132 KB] New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 2
+[t=0.00353136s, 56132 KB] New best heuristic value for ff(transform = adapt_costs(one)): 4
+[t=0.00355753s, 56132 KB] g=10, 14 evaluated, 13 expanded
+[t=0.00358214s, 56132 KB] New best heuristic value for ff(transform = adapt_costs(one)): 3
+[t=0.00360068s, 56132 KB] g=11, 15 evaluated, 14 expanded
+[t=0.00362327s, 56132 KB] New best heuristic value for ff(transform = adapt_costs(one)): 2
+[t=0.00365153s, 56132 KB] g=12, 16 evaluated, 15 expanded
+[t=0.0037079s, 56132 KB] New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 1
+[t=0.00374013s, 56132 KB] New best heuristic value for ff(transform = adapt_costs(one)): 1
+[t=0.00392729s, 56132 KB] g=13, 17 evaluated, 16 expanded
+[t=0.00397565s, 56132 KB] Solution found!
+[t=0.00401338s, 56132 KB] Actual search time: 0.00132005s
+move ambulance1 loc1 loc2 (1)
+move ambulance1 loc2 loc4 (1)
+pick ambulance1 patient2 loc4 (1)
+move ambulance1 loc4 loc2 (1)
+move ambulance1 loc2 loc1 (1)
+drop ambulance1 patient2 loc1 (1)
+move ambulance1 loc1 loc2 (1)
+move ambulance1 loc2 loc4 (1)
+move ambulance1 loc4 loc3 (1)
+pick ambulance1 patient1 loc3 (1)
+move ambulance1 loc3 loc4 (1)
+move ambulance1 loc4 loc2 (1)
+move ambulance1 loc2 loc1 (1)
+drop ambulance1 patient1 loc1 (1)
+[t=0.00404593s, 56132 KB] Plan length: 14 step(s).
+[t=0.00404593s, 56132 KB] Plan cost: 14
+[t=0.00404593s, 56132 KB] Expanded 17 state(s).
+[t=0.00404593s, 56132 KB] Reopened 0 state(s).
+[t=0.00404593s, 56132 KB] Evaluated 18 state(s).
+[t=0.00404593s, 56132 KB] Evaluations: 36
+[t=0.00404593s, 56132 KB] Generated 30 state(s).
+[t=0.00404593s, 56132 KB] Dead ends: 0 state(s).
+[t=0.00404593s, 56132 KB] Number of registered states: 18
+[t=0.00404593s, 56132 KB] Int hash set load factor: 18/32 = 0.5625
+[t=0.00404593s, 56132 KB] Int hash set resizes: 5
+[t=0.00404593s, 56132 KB] Search time: 0.00144621s
+[t=0.00404593s, 56132 KB] Total time: 0.00404593s
+Solution found.
+Peak memory: 56132 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+
+
+---------
+HSP
+---------
+
+parsing domain file "domain.pddl" done successfully
+parsing problem file "problem.1.pddl" done successfully
+java.lang.IllegalStateException: Instrumentation environment not initialised.
+
+encoding problem done successfully (10 ops, 11 facts)
+* starting A*
+java.lang.IllegalStateException: Instrumentation environment not initialised.
+java.lang.IllegalStateException: Instrumentation environment not initialised.
+* A* succeeded
+
+found plan as follows:
+
+00: (    move ambulance1 loc1 loc2) [1]
+01: (    move ambulance1 loc2 loc4) [1]
+02: (    move ambulance1 loc4 loc3) [1]
+03: (pick ambulance1 patient1 loc3) [1]
+04: (    move ambulance1 loc3 loc4) [1]
+05: (    move ambulance1 loc4 loc2) [1]
+06: (    move ambulance1 loc2 loc1) [1]
+07: (drop ambulance1 patient1 loc1) [1]
+08: (    move ambulance1 loc1 loc2) [1]
+09: (    move ambulance1 loc2 loc4) [1]
+10: (pick ambulance1 patient2 loc4) [1]
+11: (    move ambulance1 loc4 loc2) [1]
+12: (    move ambulance1 loc2 loc1) [1]
+13: (drop ambulance1 patient2 loc1) [1]
+
+plan total cost: 14.00
+
+
+time spent:       0.17 seconds parsing
+                  0.06 seconds encoding
+                  0.02 seconds searching
+                  0.25 seconds total time
+
+memory used:     -0.00 MBytes for problem representation
+                 -0.00 MBytes for searching
+                 -0.00 MBytes total
